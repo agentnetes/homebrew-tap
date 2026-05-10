@@ -1,9 +1,9 @@
 cask "a8s-mission-control" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.2"
-  sha256 arm:   "91e1e0f736f9c0958d939ade3dc9fc304295fc372174615c6eb0e70568e063ed",
-         intel: "3bd9ec3989d7dff9579d8722c2e22f6d2f552f4435249600077faa353ef9bc0c"
+  version "2.2.3"
+  sha256 arm:   "5ec2b2a80f4115e61ee218bde5720100821136173eba251d4a62849604f53f44",
+         intel: "1ca0f2b8cc9d40819f6f9f9ed4c0b9ea1af902e3a0b6f4927718939b8cef579d"
 
   url "https://updates.agentnetes.io/stable/A8s.Mission.Control-#{version}-#{arch}.dmg"
   name "A8s Mission Control"
