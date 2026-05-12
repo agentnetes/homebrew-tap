@@ -1,9 +1,9 @@
 cask "agentnetes" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.5.0"
-  sha256 arm:   "1159f1de1b7de3efa0ed0fce753f956215cc69e065a64e7141677520d18026db",
-         intel: "127ffcc3b652f1df1ad09b1d5ce68302e8c828f1a5184fa36e7bb2d0604dd832"
+  version "2.5.1"
+  sha256 arm:   "2da115aac49aec86364e180e84b0c853fef5cb0a124d8b70b6f68b0d5aa257c7",
+         intel: "d12250b7c5b90fbced56e76e15beada45bda2a378d1534e629bb4ab8ec1b3a1d"
 
   url "https://updates.agentnetes.io/stable/Agentnetes-#{version}-#{arch}.dmg"
   name "Agentnetes"
