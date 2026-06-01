@@ -2,26 +2,26 @@
 cask "a8s" do
   binary "mission-control"
 
-  version "3.0.0"
+  version "3.0.1"
 
   on_macos do
     on_intel do
-      sha256 "9aadbb1029b45a971f35468772a579297488c1e2812c6f77cb5d7aef7eb0f8c9"
+      sha256 "cfa56b1bc11ab5b54998ff6b7469dde7894a4dc328deb76ba13865ff7115ff34"
       url "https://updates.agentnetes.io/cli/v#{version}/a8s_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "e118db132d381eb15bc4dc7d4325d5faae6b85e2f91b350cad7f886e526b1ea8"
+      sha256 "4df23dde9f811eab9afac1fb56bc38d01320b6a0abae6140ae39ca30d7c62f3f"
       url "https://updates.agentnetes.io/cli/v#{version}/a8s_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "19bf2d657bb42cfea0ab0b198cdffb9396aa60f4662ac9790c8dfb33e12da7f5"
+      sha256 "92023ecee4dd68b8bbbad7802bc490ed97b0ef47904077aa640fee5386b7e52a"
       url "https://updates.agentnetes.io/cli/v#{version}/a8s_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "187565e7671f7706135ff9770e8f3812c39cc97ec54e5b465159c904206880cb"
+      sha256 "2c8ee85997664fb1e5f08344ee31262e1172e72ec6d6e3e6512361a7bd335199"
       url "https://updates.agentnetes.io/cli/v#{version}/a8s_#{version}_linux_arm64.tar.gz"
     end
   end
@@ -35,6 +35,13 @@ cask "a8s" do
   end
 
   binary "a8s"
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/a8s"], must_succeed: false
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mission-control"], must_succeed: false
+    end
+  end
 
   # No zap stanza required
 
