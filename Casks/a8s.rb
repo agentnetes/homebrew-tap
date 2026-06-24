@@ -2,26 +2,26 @@
 cask "a8s" do
   binary "mission-control"
 
-  version "3.7.10"
+  version "3.7.11"
 
   on_macos do
     on_intel do
-      sha256 "dbb625e8c4b5349096d5fdd74d0a7701e0ec16e83eb0e289f490ccdb036cb7b7"
+      sha256 "0edddf2b170e0e9aa2bd5e5a1fd2152f80e62cbeb0e43c3921592beebf55cb1e"
       url "https://updates.agentnetes.io/cli/v#{version}/a8s_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "6253095cf0f9c90b086452f837a77e51aa49cd4e5535cfd7d039f4f9635041ef"
+      sha256 "573e1160dcfe66ecd4b004fa31317bd4e48d0c5f02168117729cec5dd51aea5b"
       url "https://updates.agentnetes.io/cli/v#{version}/a8s_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "3054b75eb353d95f1897809c4bb03a45203250577ea80e5cfd929fcaf12fbe4c"
+      sha256 "57bfa779c22c3b42f392b9a29af113f74ee63194892850468ce9d88bb01637c7"
       url "https://updates.agentnetes.io/cli/v#{version}/a8s_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "8291768ff2ad3cac14d8b99d0087a3cfc7e7fa7cade2fbe1658bf28264411007"
+      sha256 "d8d41f6f4943952526a6a0ae2063b58c3e18451a226144f5db4f82c266c0f31d"
       url "https://updates.agentnetes.io/cli/v#{version}/a8s_#{version}_linux_arm64.tar.gz"
     end
   end
